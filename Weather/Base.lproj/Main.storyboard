@@ -110,22 +110,39 @@
             </objects>
             <point key="canvasLocation" x="1801.449275362319" y="4.0178571428571423"/>
         </scene>
-        <!--Table View Controller-->
+        <!--My CitiesVC-->
         <scene sceneID="YaI-Jc-MiX">
             <objects>
-                <tableViewController id="vku-pZ-aXU" sceneMemberID="viewController">
+                <tableViewController id="vku-pZ-aXU" customClass="MyCitiesVC" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="tFh-gc-iQt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="PN3-GJ-WHq">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCityes" id="PN3-GJ-WHq" customClass="MyCityesCell" customModule="Weather" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="53"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PN3-GJ-WHq" id="IVW-iH-LIl">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NS-Av-dbu">
+                                            <rect key="frame" x="30" y="16" width="354" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="6NS-Av-dbu" secondAttribute="trailing" constant="10" id="Cjv-HO-Lpl"/>
+                                        <constraint firstItem="6NS-Av-dbu" firstAttribute="top" secondItem="IVW-iH-LIl" secondAttribute="topMargin" constant="5" id="HOt-YG-oh6"/>
+                                        <constraint firstItem="6NS-Av-dbu" firstAttribute="leading" secondItem="IVW-iH-LIl" secondAttribute="leadingMargin" constant="10" id="gcv-w6-etM"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="6NS-Av-dbu" secondAttribute="bottom" constant="5" id="hoF-Oe-Ioh"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="myCityesName" destination="6NS-Av-dbu" id="qa4-ou-emF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -148,34 +165,52 @@
             </objects>
             <point key="canvasLocation" x="2626" y="4"/>
         </scene>
-        <!--Table View Controller-->
+        <!--All CityesVC-->
         <scene sceneID="Cs2-yy-xRQ">
             <objects>
-                <tableViewController id="kq5-4R-j03" sceneMemberID="viewController">
+                <tableViewController id="kq5-4R-j03" customClass="AllCityesVC" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="mQV-iR-6pl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="SYx-Qt-HI0">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllCityes" id="SYx-Qt-HI0" customClass="AllCityesCell" customModule="Weather" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="49.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SYx-Qt-HI0" id="96X-lN-Bpg">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTV-MQ-Clm">
+                                            <rect key="frame" x="30" y="14" width="374" height="21.5"/>
+                                            <color key="tintColor" systemColor="tintColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="zTV-MQ-Clm" secondAttribute="bottom" constant="3" id="Suw-bS-3SQ"/>
+                                        <constraint firstItem="zTV-MQ-Clm" firstAttribute="leading" secondItem="96X-lN-Bpg" secondAttribute="leadingMargin" constant="10" id="Xex-2G-5b5"/>
+                                        <constraint firstItem="zTV-MQ-Clm" firstAttribute="trailing" secondItem="96X-lN-Bpg" secondAttribute="trailingMargin" constant="10" id="ZS7-Fd-0Hu"/>
+                                        <constraint firstItem="zTV-MQ-Clm" firstAttribute="top" secondItem="96X-lN-Bpg" secondAttribute="topMargin" constant="3" id="gFb-XS-MUb"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cityesName" destination="zTV-MQ-Clm" id="fR5-Ya-nbl"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="kq5-4R-j03" id="mlu-Iq-qlf"/>
-                            <outlet property="delegate" destination="kq5-4R-j03" id="33v-GF-FxM"/>
+                            <outlet property="dataSource" destination="kq5-4R-j03" id="CPf-6w-DBj"/>
+                            <outlet property="delegate" destination="kq5-4R-j03" id="SCf-Z2-wKY"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="xar-xp-XOf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BP0-Wb-nkT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2625" y="-721"/>
+            <point key="canvasLocation" x="2882.608695652174" y="-730.58035714285711"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="WaO-sw-Q1S">
@@ -234,6 +269,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
