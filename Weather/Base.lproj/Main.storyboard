@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="1801.449275362319" y="4.0178571428571423"/>
         </scene>
-        <!--My CitiesVC-->
+        <!--My CityesVC-->
         <scene sceneID="YaI-Jc-MiX">
             <objects>
-                <tableViewController id="vku-pZ-aXU" customClass="MyCitiesVC" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="vku-pZ-aXU" customClass="MyCityesVC" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="tFh-gc-iQt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,14 +175,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllCityes" id="SYx-Qt-HI0" customClass="AllCityesCell" customModule="Weather" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="49.5"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="49"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SYx-Qt-HI0" id="96X-lN-Bpg">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTV-MQ-Clm">
-                                            <rect key="frame" x="30" y="14" width="374" height="21.5"/>
+                                            <rect key="frame" x="30" y="14" width="374" height="21"/>
                                             <color key="tintColor" systemColor="tintColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -198,6 +198,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cityesName" destination="zTV-MQ-Clm" id="fR5-Ya-nbl"/>
+                                    <segue destination="86H-pl-XVg" kind="unwind" identifier="addCity" unwindAction="addCityWithSegue:" id="Sbs-rm-FZl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -209,6 +210,7 @@
                     <navigationItem key="navigationItem" id="xar-xp-XOf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BP0-Wb-nkT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="86H-pl-XVg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2882.608695652174" y="-730.58035714285711"/>
         </scene>

@@ -15,7 +15,11 @@ class AllCityesVC: UITableViewController {
         "Moscow",
         "Krasnoyarsk",
         "London",
-        "Paris"
+        "Paris",
+        "Saint-Petersburg",
+        "Dubai",
+        "Sidney",
+        "Tokyo"
     ]
     
     
